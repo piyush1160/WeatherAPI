@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.test.WeatherTest" time="3.128" tests="6" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/piyushbhatia/NetBeansProjects/weather/target/test-classes:/Users/piyushbhatia/NetBeansProjects/weather/target/classes:/Users/piyushbhatia/.m2/repository/org/json/json/20240303/json-20240303.jar:/Users/piyushbhatia/.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar:/Users/piyushbhatia/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/rest-assured/5.4.0/rest-assured-5.4.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/groovy/groovy/4.0.16/groovy-4.0.16.jar:/Users/piyushbhatia/.m2/repository/org/apache/groovy/groovy-xml/4.0.16/groovy-xml-4.0.16.jar:/Users/piyushbhatia/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/piyushbhatia/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/piyushbhatia/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/piyushbhatia/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/piyushbhatia/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/json-path/5.4.0/json-path-5.4.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/groovy/groovy-json/4.0.16/groovy-json-4.0.16.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/rest-assured-common/5.4.0/rest-assured-common-5.4.0.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/xml-path/5.4.0/xml-path-5.4.0.jar:/Users/piyushbhatia/.m2/repository/org/testng/testng/7.9.0/testng-7.9.0.jar:/Users/piyushbhatia/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/piyushbhatia/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/piyushbhatia/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/piyushbhatia/.m2/repository/com/github/javafaker/javafaker/1.0.2/javafaker-1.0.2.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Users/piyushbhatia/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23-android.jar:/Users/piyushbhatia/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/piyushbhatia/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/piyushbhatia/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar:/Users/piyushbhatia/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar:/Users/piyushbhatia/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/Users/piyushbhatia/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/piyushbhatia/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/piyushbhatia/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/Users/piyushbhatia/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/Users/piyushbhatia/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/Users/piyushbhatia/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/piyushbhatia/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/json-schema-validator/5.1.1/json-schema-validator-5.1.1.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/Users/piyushbhatia/.m2/repository/com/google/guava/guava/28.2-android/guava-28.2-android.jar:/Users/piyushbhatia/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/piyushbhatia/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/piyushbhatia/.m2/repository/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar:/Users/piyushbhatia/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar:/Users/piyushbhatia/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/Users/piyushbhatia/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/Users/piyushbhatia/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/Users/piyushbhatia/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/piyushbhatia/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/Users/piyushbhatia/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/piyushbhatia/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/piyushbhatia/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-testng/2.24.0/allure-testng-2.24.0.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-test-filter/2.24.0/allure-test-filter-2.24.0.jar:/Users/piyushbhatia/.m2/repository/org/assertj/assertj-core/3.8.0/assertj-core-3.8.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/piyushbhatia/NetBeansProjects/weather/target/surefire/surefirebooter-20240318162532439_3.jar /Users/piyushbhatia/NetBeansProjects/weather/target/surefire 2024-03-18T16-25-32_401-jvmRun1 surefire-20240318162532439_1tmp surefire_0-20240318162532439_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="com.test.WeatherTest"/>
+    <property name="surefire.test.class.path" value="/Users/piyushbhatia/NetBeansProjects/weather/target/test-classes:/Users/piyushbhatia/NetBeansProjects/weather/target/classes:/Users/piyushbhatia/.m2/repository/org/json/json/20240303/json-20240303.jar:/Users/piyushbhatia/.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar:/Users/piyushbhatia/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/rest-assured/5.4.0/rest-assured-5.4.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/groovy/groovy/4.0.16/groovy-4.0.16.jar:/Users/piyushbhatia/.m2/repository/org/apache/groovy/groovy-xml/4.0.16/groovy-xml-4.0.16.jar:/Users/piyushbhatia/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/piyushbhatia/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/piyushbhatia/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/piyushbhatia/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/piyushbhatia/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/json-path/5.4.0/json-path-5.4.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/groovy/groovy-json/4.0.16/groovy-json-4.0.16.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/rest-assured-common/5.4.0/rest-assured-common-5.4.0.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/xml-path/5.4.0/xml-path-5.4.0.jar:/Users/piyushbhatia/.m2/repository/org/testng/testng/7.9.0/testng-7.9.0.jar:/Users/piyushbhatia/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/piyushbhatia/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/piyushbhatia/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/piyushbhatia/.m2/repository/com/github/javafaker/javafaker/1.0.2/javafaker-1.0.2.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Users/piyushbhatia/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23-android.jar:/Users/piyushbhatia/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/piyushbhatia/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/piyushbhatia/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar:/Users/piyushbhatia/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar:/Users/piyushbhatia/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/Users/piyushbhatia/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/piyushbhatia/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/piyushbhatia/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/Users/piyushbhatia/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/Users/piyushbhatia/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/Users/piyushbhatia/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/Users/piyushbhatia/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/piyushbhatia/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/piyushbhatia/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/Users/piyushbhatia/.m2/repository/io/rest-assured/json-schema-validator/5.1.1/json-schema-validator-5.1.1.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/Users/piyushbhatia/.m2/repository/com/google/guava/guava/28.2-android/guava-28.2-android.jar:/Users/piyushbhatia/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/piyushbhatia/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/piyushbhatia/.m2/repository/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar:/Users/piyushbhatia/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar:/Users/piyushbhatia/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/Users/piyushbhatia/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/Users/piyushbhatia/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/Users/piyushbhatia/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/Users/piyushbhatia/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/piyushbhatia/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/Users/piyushbhatia/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/piyushbhatia/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/piyushbhatia/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-testng/2.24.0/allure-testng-2.24.0.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/Users/piyushbhatia/.m2/repository/io/qameta/allure/allure-test-filter/2.24.0/allure-test-filter-2.24.0.jar:/Users/piyushbhatia/.m2/repository/org/assertj/assertj-core/3.8.0/assertj-core-3.8.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/piyushbhatia"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/piyushbhatia/NetBeansProjects/weather"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/piyushbhatia/NetBeansProjects/weather/target/surefire/surefirebooter-20240318162532439_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.7+8-LTS-224"/>
+    <property name="user.name" value="piyushbhatia"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="14.4"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="/Applications/NetBeans/Apache NetBeans 18.app/Contents/Resources/NetBeans/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="localRepository" value="/Users/piyushbhatia/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/zh/2hv4br7d3_l9nfvsw_xlgpc00000gn/T/"/>
+    <property name="java.version" value="17.0.7"/>
+    <property name="user.dir" value="/Users/piyushbhatia/NetBeansProjects/weather"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/piyushbhatia/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.7+8-LTS-224"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testFetchWeatherData" classname="com.test.WeatherTest" time="1.131">
+    <system-out><![CDATA[HTTP/1.1 200 OK
+Server: openresty
+Date: Mon, 18 Mar 2024 10:55:33 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 485
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=london
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": -0.1257,
+        "lat": 51.5085
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 286.06,
+        "feels_like": 285.55,
+        "temp_min": 284.79,
+        "temp_max": 287.04,
+        "pressure": 1015,
+        "humidity": 82
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.58,
+        "deg": 236,
+        "gust": 6.71
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1710759064,
+    "sys": {
+        "type": 2,
+        "id": 2075535,
+        "country": "GB",
+        "sunrise": 1710742023,
+        "sunset": 1710785394
+    },
+    "timezone": 0,
+    "id": 2643743,
+    "name": "London",
+    "cod": 200
+}
+{"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":286.06,"feels_like":285.55,"temp_min":284.79,"temp_max":287.04,"pressure":1015,"humidity":82},"visibility":10000,"wind":{"speed":3.58,"deg":236,"gust":6.71},"clouds":{"all":75},"dt":1710759064,"sys":{"type":2,"id":2075535,"country":"GB","sunrise":1710742023,"sunset":1710785394},"timezone":0,"id":2643743,"name":"London","cod":200}
+12.909998
+82
+broken clouds
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testTemperature" classname="com.test.WeatherTest" time="0.273">
+    <system-out><![CDATA[HTTP/1.1 200 OK
+Server: openresty
+Date: Mon, 18 Mar 2024 10:55:34 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 485
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=london
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": -0.1257,
+        "lat": 51.5085
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 286.06,
+        "feels_like": 285.55,
+        "temp_min": 284.79,
+        "temp_max": 287.04,
+        "pressure": 1015,
+        "humidity": 82
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.58,
+        "deg": 236,
+        "gust": 6.71
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1710759064,
+    "sys": {
+        "type": 2,
+        "id": 2075535,
+        "country": "GB",
+        "sunrise": 1710742023,
+        "sunset": 1710785394
+    },
+    "timezone": 0,
+    "id": 2643743,
+    "name": "London",
+    "cod": 200
+}
+{"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":286.06,"feels_like":285.55,"temp_min":284.79,"temp_max":287.04,"pressure":1015,"humidity":82},"visibility":10000,"wind":{"speed":3.58,"deg":236,"gust":6.71},"clouds":{"all":75},"dt":1710759064,"sys":{"type":2,"id":2075535,"country":"GB","sunrise":1710742023,"sunset":1710785394},"timezone":0,"id":2643743,"name":"London","cod":200}
+12.909998
+82
+broken clouds
+]]></system-out>
+  </testcase>
+  <testcase name="testHumidity" classname="com.test.WeatherTest" time="0.242">
+    <system-out><![CDATA[HTTP/1.1 200 OK
+Server: openresty
+Date: Mon, 18 Mar 2024 10:55:34 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 485
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=london
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": -0.1257,
+        "lat": 51.5085
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 286.06,
+        "feels_like": 285.55,
+        "temp_min": 284.79,
+        "temp_max": 287.04,
+        "pressure": 1015,
+        "humidity": 82
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.58,
+        "deg": 236,
+        "gust": 6.71
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1710759064,
+    "sys": {
+        "type": 2,
+        "id": 2075535,
+        "country": "GB",
+        "sunrise": 1710742023,
+        "sunset": 1710785394
+    },
+    "timezone": 0,
+    "id": 2643743,
+    "name": "London",
+    "cod": 200
+}
+{"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":286.06,"feels_like":285.55,"temp_min":284.79,"temp_max":287.04,"pressure":1015,"humidity":82},"visibility":10000,"wind":{"speed":3.58,"deg":236,"gust":6.71},"clouds":{"all":75},"dt":1710759064,"sys":{"type":2,"id":2075535,"country":"GB","sunrise":1710742023,"sunset":1710785394},"timezone":0,"id":2643743,"name":"London","cod":200}
+12.909998
+82
+broken clouds
+]]></system-out>
+  </testcase>
+  <testcase name="testFetchWeatherData_ValidCity" classname="com.test.WeatherTest" time="0.25">
+    <system-out><![CDATA[HTTP/1.1 200 OK
+Server: openresty
+Date: Mon, 18 Mar 2024 10:55:34 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 485
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=london
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": -0.1257,
+        "lat": 51.5085
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 286.06,
+        "feels_like": 285.55,
+        "temp_min": 284.79,
+        "temp_max": 287.04,
+        "pressure": 1015,
+        "humidity": 82
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.58,
+        "deg": 236,
+        "gust": 6.71
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1710759064,
+    "sys": {
+        "type": 2,
+        "id": 2075535,
+        "country": "GB",
+        "sunrise": 1710742023,
+        "sunset": 1710785394
+    },
+    "timezone": 0,
+    "id": 2643743,
+    "name": "London",
+    "cod": 200
+}
+{"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":286.06,"feels_like":285.55,"temp_min":284.79,"temp_max":287.04,"pressure":1015,"humidity":82},"visibility":10000,"wind":{"speed":3.58,"deg":236,"gust":6.71},"clouds":{"all":75},"dt":1710759064,"sys":{"type":2,"id":2075535,"country":"GB","sunrise":1710742023,"sunset":1710785394},"timezone":0,"id":2643743,"name":"London","cod":200}
+12.909998
+82
+broken clouds
+]]></system-out>
+  </testcase>
+  <testcase name="testFetchWeatherData_InvalidCity" classname="com.test.WeatherTest" time="0.709">
+    <failure message="Failed to parse the JSON document" type="io.restassured.path.json.exception.JsonPathException"><![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+	at com.test.WeatherTest.testFetchWeatherData_InvalidCity(WeatherTest.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading 'w', no possible valid JSON value or punctuation could be recognized.
+	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
+	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 38 more
+]]></failure>
+    <system-out><![CDATA[HTTP/1.1 404 Not Found
+Server: openresty
+Date: Mon, 18 Mar 2024 10:55:35 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 40
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=xvn
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "cod": "404",
+    "message": "city not found"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testFetchWeatherData_EmptyCity" classname="com.test.WeatherTest" time="0.217">
+    <failure message="Schema to use cannot be null" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: Schema to use cannot be null
+	at io.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:270)
+	at io.restassured.module.jsv.JsonSchemaValidator.access$300(JsonSchemaValidator.java:75)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:281)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+	at com.test.WeatherTest.testFetchWeatherData_EmptyCity(WeatherTest.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[HTTP/1.1 404 Not Found
+Server: openresty
+Date: Mon, 18 Mar 2024 10:55:35 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 40
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=%20
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "cod": "404",
+    "message": "city not found"
+}
+HTTP/1.1 404 Not Found
+Server: openresty
+Date: Mon, 18 Mar 2024 10:55:35 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 40
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=%20
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "cod": "404",
+    "message": "city not found"
+}
+]]></system-out>
+  </testcase>
+</testsuite>
