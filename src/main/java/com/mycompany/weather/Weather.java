@@ -37,6 +37,9 @@ import org.testng.annotations.Test;
 //
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 
 
 public class Weather{
@@ -85,11 +88,14 @@ public class Weather{
 //            return "Description: "+ descp + "\nTemperature: "+ tempCelcius +"Celicus\nHumidity: " + humdity + "%" ;
 
 
-      if(city.isEmpty()){
-           return "Please enter city .";
-        }
-  
-  
+//      if(city.isEmpty()){
+//           return "Please enter city .";
+//        }
+   if(city.isEmpty()){
+        // Show a popup message
+        JOptionPane.showMessageDialog(null, "Please enter city.", "Error", JOptionPane.ERROR_MESSAGE);
+        return " ";
+    }
 
         RestAssured.baseURI= "http://api.openweathermap.org/";
        String response = given().queryParam("q",city).queryParam("appid","c71a3c0964298436fd10d0c75736dff8").get("data/2.5/weather")
@@ -147,7 +153,7 @@ public class Weather{
 //    }
      
     public static void main(String[] args){
-         frame = new JFrame("Weather App");
+         frame = new JFrame("KeyForecast");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,300);
         frame.setLayout(new FlowLayout());
@@ -162,18 +168,21 @@ public class Weather{
         frame.add(locationFeild);
         frame.add(fetchButton);
         frame.add(weatherDisplay);
-        
-        
+       
+        //frame.setBackground(new java.awt.Color(230, 230, 250));
+        frame.getContentPane().setBackground(new java.awt.Color(230, 230, 250));
         fetchButton.addActionListener(new ActionListener(){
             
             public void actionPerformed(ActionEvent e){
                 String city = locationFeild.getText();
                 String weatherInfo = fetchWeatherData(city);
                 weatherDisplay.setText(weatherInfo);
-                
+               
                 
             }
         });
+        
+        
         
         
         frame.setVisible(true);

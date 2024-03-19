@@ -30,7 +30,7 @@ public class WeatherTest {
     JsonPath jsonresponse;
 
     MainWeather mobj = new MainWeather();
-        @Test
+     @Test(priority = 1)
     public void testFetchWeatherData() {
         String weatherInfo = mobj.testWeatherApi("London");
         Assert.assertNotNull(weatherInfo);
