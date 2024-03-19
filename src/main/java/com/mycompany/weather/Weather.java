@@ -51,42 +51,23 @@ public class Weather{
     private static final String apiKey = "c71a3c0964298436fd10d0c75736dff8"; 
     
     
+    private static String fetchWeatherData2(String city){
+        try{
+          RestAssured.baseURI= "http://api.openweathermap.org/";
+        String response2 = given().queryParam("q",city).queryParam("appid","c71a3c0964298436fd10d0c75736dff8")
+               .get("data/2.5/weather")
+                .then().log().all()
+                .assertThat().statusCode(404).extract().response().asString();
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        return "";
+    }
+    
+    
     private static String fetchWeatherData(String city){
         try{
-//           // net package 
-//                    URL url = new URL("https://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid=" +apiKey );
-//            HttpURLConnection  connection = (HttpURLConnection) url.openConnection();
-//            connection.setRequestMethod("GET");
-//            
-//            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-//      
-//            String response ="";
-//            String line ;
-//            
-//            while( (line =reader.readLine())!=null){
-//                response+=line;
-//            }
-//            
-//            JSONObject jsonObject = (JSONObject) JSONValue.parse(response);      
-//             JSONObject mainobj = (JSONObject) jsonObject.getJSONObject("main");
-//            
-//            
-//            double tempinKelvin = (double)mainobj.get("temp");
 //           
-//            long humdity = (long)mainobj.get("humidity");
-//            
-//            double tempCelcius = tempinKelvin - 273.15;
-//            System.out.println(tempCelcius);
-//            // reterive weather info ..
-//            
-//            JSONArray weatherArray = (JSONArray) jsonObject.get("weather");
-//            JSONObject weather = (JSONObject) weatherArray.get(0);
-//            
-//            String descp = (String) weather.getString("description");
-//             System.out.println(descp);
-//            
-//            return "Description: "+ descp + "\nTemperature: "+ tempCelcius +"Celicus\nHumidity: " + humdity + "%" ;
-
 
 //      if(city.isEmpty()){
 //           return "Please enter city .";
@@ -96,15 +77,22 @@ public class Weather{
         JOptionPane.showMessageDialog(null, "Please enter city.", "Error", JOptionPane.ERROR_MESSAGE);
         return " ";
     }
-
-        RestAssured.baseURI= "http://api.openweathermap.org/";
-       String response = given().queryParam("q",city).queryParam("appid","c71a3c0964298436fd10d0c75736dff8").get("data/2.5/weather")
+   
+    RestAssured.baseURI= "http://api.openweathermap.org/";
+        String response1 = given().queryParam("q",city).queryParam("appid","c71a3c0964298436fd10d0c75736dff8")
+               .get("data/2.5/weather")
                 .then().log().all()
-                .assertThat().statusCode(200).extract().response().asString();
+                .assertThat().extract().response().asString();
 
-        System.out.println(response);
+//        RestAssured.baseURI= "http://api.openweathermap.org/";
+//        String response2 = given().queryParam("q",city).queryParam("appid","c71a3c0964298436fd10d0c75736dff8")
+//               .get("data/2.5/weather")
+//                .then().log().all()
+//                .assertThat().statusCode(404).extract().response().asString();
 
-        JsonPath jsonresponse = new JsonPath(response);
+        System.out.println(response1);
+
+        JsonPath jsonresponse = new JsonPath(response1);
         Float temp  = jsonresponse.get("main.temp");
         Float tempinCelcius = (float) (temp - 273.15);
         System.out.println(tempinCelcius);
@@ -115,9 +103,14 @@ public class Weather{
         
         
         
-        //String cityJson =jsonresponse.get("message");
-          int responseCode = jsonresponse.get("cod");
-            System.out.println("responseCode");
+
+  // String cityJson =jsonresponse.get("message");
+  //          int responseCode = jsonresponse.get("sys.cod");
+  //            System.out.println("responseCode");
+  //            
+  //            if(responseCode == 404){
+  //                System.out.println("addd valid city");
+  //            }
         
         //int windSpeed = jsonresponse.get("wind.speed");
 //            System.out.println("windSpeed");
@@ -125,7 +118,8 @@ public class Weather{
         return "Description : "+ descp + "\nTemperature : "+ tempinCelcius + " Celsius\nHumidity : "+ humidity + "%"   ;
     
         }catch(Exception e){
-            return "Failed to fetch data";
+            JOptionPane.showMessageDialog(null, "Please enter valid city.", "Error", JOptionPane.ERROR_MESSAGE);
+            return "";
         }
         
         
@@ -164,6 +158,7 @@ public class Weather{
         weatherDisplay.setEditable(false);
         
         // display everything 
+        
         frame.add(new JLabel("Enter City Name"));
         frame.add(locationFeild);
         frame.add(fetchButton);
@@ -181,9 +176,6 @@ public class Weather{
                 
             }
         });
-        
-        
-        
         
         frame.setVisible(true);
         
